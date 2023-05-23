@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
 	<meta charset="utf-8">
 	<meta name="robots" content="index, follow">
@@ -11,7 +11,7 @@
 	<meta name="theme-color" content="#073658">
 	<title>Incrível! 10 SUPERALIMENTOS que promovem o Anti-envelhecimento</title>
 	<link rel="shortcut icon" type="image/x-icon" href="img/icon.png">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+	
 	<style type="text/css">
 		/*General*/
 		* {
@@ -181,14 +181,14 @@
 			margin-top: 16px;
 		}
 
-		#product-action {
+		.product-action {
 			text-align: center;
 			margin: 2rem auto;
 		}
-		#product-call {
+		.product-call {
 			text-decoration: none;
 		}
-		#product-callin {
+		.product-callin {
 			font-weight: 700;
 			font-size: 1.2rem;
 			text-align: center;
@@ -315,7 +315,7 @@
 			display: flex;
 			flex-direction: row;
 			gap: 8px;
-			color: grey;
+			color: #333333;
 			margin-left: 60px;
 			font-size: 0.7rem;
 		}
@@ -421,7 +421,7 @@
 			
 				<div id="product-head">
 					<h1 id="product-title">Transforme sua dieta: <br> Os <span>10 alimentos antienvelhecimento</span> mais poderosos!</h1>
-					<h3 id="product-subtitle">Aprenda como <span>retardar o processo de envelhecimento</span> incluindo esses alimentos em sua rotina e <span>conquiste</span> um corpo saudável e uma aparência rejuvenescida.</h3>
+					<h2 id="product-subtitle">Aprenda como <span>retardar o processo de envelhecimento</span> incluindo esses alimentos em sua rotina e <span>conquiste</span> um corpo saudável e uma aparência rejuvenescida.</h2>
 				</div>
 
 				<div id="product-video">
@@ -434,11 +434,11 @@
 							<div>CLIQUE PARA OUVIR</div>
 						</div>
 					</div>
-					<!-- <iframe width="420" height="315" src=""></iframe> -->
+					<!-- <iframe width="420" height="315" src="https://www.youtube.com/embed/0_7od0xQftw"></iframe> -->
 				</div>
 
-				<div id="product-action">
-					<a id="product-call" href="https://pay.kiwify.com.br/uTixoGx"><div id="product-callin" class="pulse">EU QUERO UMA VIDA SAUDÁVEL</div></a>
+				<div class="product-action">
+					<a class="product-call" href="https://pay.hotmart.com/T81298848F"><div class="product-callin pulse">EU QUERO UMA VIDA SAUDÁVEL</div></a>
 				</div>
 
 			</div>
@@ -468,8 +468,8 @@
 
 				<div class="product-photo-box"><img class="product-photo-image" src="img/food-10.png"></div>
 
-				<div id="product-action">
-					<a id="product-call" href="https://pay.kiwify.com.br/uTixoGx"><div id="product-callin" class="pulse">EU QUERO UMA VIDA SAUDÁVEL</div></a>
+				<div class="product-action">
+					<a class="product-call" href="https://pay.hotmart.com/T81298848F"><div class="product-callin pulse">EU QUERO UMA VIDA SAUDÁVEL</div></a>
 				</div>
 
 			</div>
@@ -491,8 +491,8 @@
 
 				<div class="product-photo-box"><img class="product-photo-image" src="img/food-7.png"></div>
 
-				<div id="product-action">
-					<a id="product-call" href="https://pay.kiwify.com.br/uTixoGx"><div id="product-callin" class="pulse">EU QUERO UMA VIDA SAUDÁVEL</div></a>
+				<div class="product-action">
+					<a class="product-call" href="https://pay.hotmart.com/T81298848F"><div class="product-callin pulse">EU QUERO UMA VIDA SAUDÁVEL</div></a>
 				</div>
 
 			</div>
@@ -531,6 +531,15 @@
 				</div>
 
 				<div id="comment-log">Para comentar, você precisa estar logado.</div>
+
+			</div>
+		</section>
+
+		<!-- FOOTER -->
+		<section id="footer">
+			<div class="container">
+				
+				<p>Esse produto é comercializado através da Hotmart. A plataforma não faz controle editorial prévio dos produtos comercializados, tão menos avalia a tecnicidade e experiência daqueles que os produzem. A existência de um produto e sua aquisição, através plataforma, não podem ser consideradas como garantia de qualidade de conteúdo e resultado, em qualquer hipótese. Ao adquiri-lo, o comprador declara estar ciente dessas informações. Os termos e políticas da Hotmart podem ser acessados <a href="https://www.hotmart.com/legal/pt-BR">aqui</a>, antes mesmo da conclusão da compra.</p>
 
 			</div>
 		</section>
@@ -586,14 +595,17 @@
 				$(novo).addClass("level");
 			}
 			$(novo).find(".comment-item-image img").attr('src',comments[i].image);
+			$(novo).find(".comment-item-image img").attr('alt',"Imagem de perfil de "+comments[i].name);
 			$(novo).find(".comment-item-name").text(comments[i].name);
 			$(novo).find(".comment-item-text").text(comments[i].text);
 			$(novo).find(".comment-time").text(comments[i].time+"min");
 			$(novo).find(".comment-social-number").text(comments[i].like);
 			$("#comment-box").append(novo.removeClass("template"));
 		}
-		
-		$("#product-call").click(function(){ $.get("https://db.eng.br/fin/_plr/"); });
+
+		$(document).ready(function(){
+			$("head").append('<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">')
+		});
 
 	</script>
 
