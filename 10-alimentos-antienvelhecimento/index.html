@@ -625,6 +625,17 @@
 			$("#comment-box").append(novo.removeClass("template"));
 		}
 
+		$(document).ready(function() {
+			var video = $('#product-video video')[0];
+			$(video).on('timeupdate', function() {
+				var currentTime = video.currentTime;
+				// console.log('Tempo atual: ' + currentTime.toFixed(2));
+				if (currentTime > 228) {
+					$(".product-call").show();
+				}
+			});
+		});
+
 	</script>
 
 </body>
